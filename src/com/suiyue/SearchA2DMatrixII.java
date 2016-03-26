@@ -6,7 +6,7 @@ package com.suiyue;
 public class SearchA2DMatrixII {
     /*横列和纵列均已排序
     首先考虑最常规的方法，逐行遍历
-    复杂度nlog(m)
+    复杂度O(nlog(m))
      */
     public boolean searchMatrix(int[][] matrix, int target) {
         for(int i=0; i<matrix.length; i++) {
@@ -29,6 +29,7 @@ public class SearchA2DMatrixII {
     /*
     改进算法
     根据行列递增的属性遍历
+    复杂度O(m+n)
      */
     public boolean searchMatrix2(int[][] matrix, int target) {
         if(matrix.length == 0 || matrix[0].length == 0) {
