@@ -24,7 +24,7 @@ public class MyLinkedList {
     删除第index个节点
      */
     public Boolean deleteNode(int index) {
-        if (index<1 || index >length()) {
+        if (index<1 || index >length(head)) {
             return false;
         }
         if (index == 1) {
@@ -79,7 +79,7 @@ public class MyLinkedList {
     /*
     返回链表长度
      */
-    public int length() {
+    public int length(Node head) {
         int length = 0;
         Node tmp = head;
         while (tmp != null) {
